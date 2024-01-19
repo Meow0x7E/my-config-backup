@@ -1,6 +1,6 @@
 setopt autocd beep extendedglob nomatch notify
 
-for f (${(f)"$(print -l ${ZSH_CONFIG_HOME}/source/*)"}) {
+for f (${(f)"$(print -l ${ZSH_CONFIG_HOME}/source/*(.,@))"}) {
     if [[ -f $f && -r $f ]] {
         source "$f"
     }
