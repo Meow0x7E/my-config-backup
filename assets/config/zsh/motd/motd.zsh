@@ -1,7 +1,7 @@
 local this="${0:A:h}"
 
 local function slow_scan_line_print_title(){
-    for s (${(f)"$(<${this}/title.txt)"}) {
+    for s (${(f)"$(<${this}/ascii/arch.txt)"}) {
         print "$s"
         sleep "0.01s"
     }

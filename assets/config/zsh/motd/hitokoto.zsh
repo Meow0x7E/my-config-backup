@@ -6,7 +6,7 @@ local URL='https://v1.hitokoto.cn/?c=a&c=b&c=c&c=d&c=e&c=f&c=g&c=h&c=i&c=j&c=k&c
 
 local function get_hitokoto_text() { curl -sf $URL }
 
-if [[ -r $BUFFER_DIRECTORY && -w $BUFFER_DIRECTORY ]] {
+if [[ -r $BUFFER_DIRECTORY && -w $BUFFER_DIRECTORY && -r $BUFFER_FILE && -w $BUFFER_FILE ]] {
     print "$(<$BUFFER_FILE)"
 } else {
     print "$(get_hitokoto_text)"
